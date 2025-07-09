@@ -5,6 +5,8 @@ import { FaBars } from "react-icons/fa";
 
 const navLinks = [
   { name: "App", href: "#app" },
+  { name: "What We Offer", href: "#offer" },
+  { name: "How It Works", href: "#how" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -23,15 +25,14 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const appSection = document.getElementById("app");
-      const contactSection = document.getElementById("contact");
-      const scrollPosition = window.scrollY + 120;
-      if (contactSection && scrollPosition >= contactSection.offsetTop) {
-        setActiveSection("contact");
-      } else if (appSection && scrollPosition >= appSection.offsetTop) {
-        setActiveSection("app");
-      } else {
-        setActiveSection("");
+      const sections = ["app", "offer", "how", "contact"];
+      const scrollPosition = window.scrollY + 150;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && scrollPosition >= section.offsetTop) {
+          setActiveSection(sections[i]);
+          break;
+        }
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -50,15 +51,13 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`${styles.header} ${scrolled ? styles.transparent : ""}`}
-    >
+    <header className={`${styles.header} ${scrolled ? styles.transparent : ""}`}>
       <div className={styles.container}>
         <a href="#" className={styles.logo}>
           <img src={logo} alt="Basirah Logo" />
           <span className={styles.brandName}>Basirah Institute</span>
         </a>
-        <nav className={styles.navMenu + (menuOpen ? " " + styles.open : "")}>
+        <nav className={`${styles.navMenu} ${menuOpen ? styles.open : ""}`}>
           <button
             className={styles.closeMenu}
             onClick={() => setMenuOpen(false)}

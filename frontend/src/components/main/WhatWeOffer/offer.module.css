@@ -1,0 +1,114 @@
+.scrollWrapper {
+  height: 150vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  transition: height 0.3s ease;
+}
+
+.scrollWrapperReleased {
+  height: auto !important;
+  overflow-y: visible !important;
+}
+
+.stackArea {
+  height: 300vh; /* one screen per card + buffer */
+  display: flex;
+  position: relative;
+  background: white;
+}
+
+.left {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.right {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-basis: 50%;
+}
+
+.title {
+  width: 420px;
+  font-size: 84px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 88px;
+}
+
+.subTitle {
+  width: 420px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.subTitle button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 15px 30px;
+  background: black;
+  color: white;
+  border-radius: 8mm;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  border-radius: 25px;
+  position: absolute;
+  top: calc(50% - 175px);
+  left: calc(50% - 175px);
+  transition: 0.5s ease-in-out;
+  box-sizing: border-box;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card:nth-child(1) {
+  background: #11448d;
+}
+
+.card:nth-child(2) {
+  background: #028C79;
+}
+
+.card:nth-child(3) {
+  background: #11448d;
+}
+
+.card:nth-child(4) {
+  background: #028C79;
+}
+
+.sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+}
+
+.away {
+  transform-origin: bottom left;
+}
