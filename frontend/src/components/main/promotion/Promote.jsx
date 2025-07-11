@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from "./promote.module.css";
 import phoImg from "../../../assets/images/pho.png";
 import qrImg from "../../../assets/images/qr.jpg";
-import skylinkLogo from "../../../assets/skylink.svg";
+import skylinkLogo from "../../../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAppStoreIos } from "@fortawesome/free-brands-svg-icons";
+import { faAppStoreIos, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 import quranImg from "../../../assets/images/quran.png";
 import qrImg2 from "../../../assets/images/qr.jpg";
-import skylinkImg from "../../../assets/images/skylink.jpeg";
+import skylinkImg from "../../../assets/images/logo.png";
 
 function Promotion() {
   // Placeholder screen images (replace with real ones later)
@@ -58,25 +58,49 @@ function Promotion() {
           Experience seamless learning and teaching—anytime, anywhere.
         </div>
         <div className={styles.downloadRow}>
-          <a
-            href="https://apps.apple.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.promoDownloadBtn}
-          >
-            <FontAwesomeIcon
-              icon={faAppStoreIos}
-              className={styles.promoBtnIcon}
-            />
-            Download on App Store
-          </a>
-          <div className={styles.qrContainerSmall}>
-            <img
-              src={qrImg}
-              alt="Download Basirah App QR"
-              className={styles.qrImageSmall}
-            />
-            <div className={styles.qrLabelSmall}>Scan</div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <a
+              href="https://apps.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.promoDownloadBtn}
+            >
+              <FontAwesomeIcon
+                icon={faAppStoreIos}
+                className={styles.promoBtnIcon}
+              />
+              App Store
+            </a>
+            <div className={styles.qrContainerSmall}>
+              <img
+                src={qrImg}
+                alt="Download Basirah App QR"
+                className={styles.qrImageSmall}
+              />
+              <div className={styles.qrLabelSmall}>Scan</div>
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <a
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.promoDownloadBtn}
+            >
+              <FontAwesomeIcon
+                icon={faGooglePlay}
+                className={styles.promoBtnIcon}
+              />
+              Play Store
+            </a>
+            <div className={styles.qrContainerSmall}>
+              <img
+                src={qrImg}
+                alt="Download Basirah App QR for Play Store"
+                className={styles.qrImageSmall}
+              />
+              <div className={styles.qrLabelSmall}>Scan</div>
+            </div>
           </div>
         </div>
       </div>
