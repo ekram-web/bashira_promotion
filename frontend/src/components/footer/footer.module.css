@@ -4,6 +4,8 @@
   padding: 0 1rem 2.5rem 1rem;
   position: relative;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
 
 .wave {
@@ -66,7 +68,8 @@
   font-size: 1.5rem;
   color: #e0f7f4;
   margin: 0 0 0.5rem 0;
-  font-weight: 50;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
 }
 
 .partnerLogo {
@@ -120,6 +123,40 @@
   background: #00c894;
   color: #042048;
   box-shadow: 0 4px 16px #00c89455;
+}
+
+.middleColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0.5 320px;
+  min-width: 180px;
+  margin-top: 5rem;
+}
+
+.footerNavMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerNavMenu a {
+  color: #e0f7f4;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+
+.footerNavMenu a:hover,
+.footerNavMenu a:focus {
+  color: #00c894;
 }
 
 @media (max-width: 900px) {

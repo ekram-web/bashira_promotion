@@ -9,6 +9,7 @@
   box-shadow: 0 2px 16px #00c89422;
   border-bottom: 1.5px solid rgba(0, 200, 148, 0.13);
   font-family: 'Poppins', sans-serif;
+  font-weight: 250;
   height: 66px;
 }
 
@@ -89,6 +90,8 @@
   padding: 0.5rem 0.5rem;
   border-radius: 8px;
   display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
 
 .navMenu a::after {

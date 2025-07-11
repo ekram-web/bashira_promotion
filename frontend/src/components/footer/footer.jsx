@@ -4,6 +4,13 @@ import logo from "../../assets/images/Basirah Full Color Transparent.png";
 import skylink from "../../assets/images/logo.png";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
+const navLinks = [
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
+  { name: "What We Offer", href: "#offer" },
+  { name: "Contact", href: "#contact" },
+];
+
 function Footer() {
   return (
     <footer className={styles.footer}>
@@ -17,6 +24,17 @@ function Footer() {
               <img src={skylink} alt="Partner Logo" className={styles.partnerLogo} />
             </div>
           </div>
+        </div>
+        <div className={styles.middleColumn}>
+          <nav className={styles.footerNavMenu}>
+            <ul>
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
         <div className={styles.rightColumn}>
           <div className={styles.footerAddress}>
