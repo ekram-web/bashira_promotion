@@ -6,7 +6,9 @@ import Promote from "../components/main/promotion/Promote.jsx";
 import Partner from "../components/main/paretner/Partner.jsx";
 import Review from "../components/main/reviews/Review.jsx";
 import About from "../components/main/about/About.jsx";
+import WhatWeOffer from "../components/main/WhatWeOffer/offer.jsx";
 import Contact from "../components/main/contact/Contact.jsx";
+import HowItWorks from "../components/main/HowItWorks/how.jsx";
 import "../App.css";
 
 function Home() {
@@ -16,13 +18,13 @@ function Home() {
       <div className="main-content-with-padding">
         <Hero />
         <About />
-
+        <WhatWeOffer />
         <Promote />
+        <HowItWorks />
 
         <Review />
         <Partner />
         <Contact />
-
         <Footer />
       </div>
     </>
