@@ -15,10 +15,9 @@ h1, h2, h3, .section-title {
 }
 
 nav, .navMenu, button, .cta {
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
-  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
-
 blockquote, .quote, .tagline {
   font-family: 'Dancing Script', cursive;
 }

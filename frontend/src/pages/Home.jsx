@@ -19,13 +19,11 @@ function Home() {
         <Hero />
         <About />
         <WhatWeOffer />
-        <HowItWorks />
         <Promote />
-
+        <HowItWorks />
         <Review />
         {/* <Partner /> */}
         <Contact />
-
         <Footer />
       </div>
     </>

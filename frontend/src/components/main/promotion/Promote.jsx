@@ -1,26 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./promote.module.css";
 import phoImg from "../../../assets/images/pho.png";
 import qrImg from "../../../assets/images/qr.jpg";
 import skylinkLogo from "../../../assets/skylink.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAppStoreIos } from "@fortawesome/free-brands-svg-icons";
+import quranImg from "../../../assets/images/quran.png";
+import qrImg2 from "../../../assets/images/qr.jpg";
+import skylinkImg from "../../../assets/images/skylink.jpeg";
 
 function Promotion() {
+  // Placeholder screen images (replace with real ones later)
+  const screenImages = [quranImg, qrImg2, skylinkImg];
+  const [currentScreen, setCurrentScreen] = useState(0);
+  const [isRotating, setIsRotating] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsRotating(true);
+      setTimeout(() => {
+        setCurrentScreen((prev) => (prev + 1) % screenImages.length);
+        setIsRotating(false);
+      }, 900); // match animation duration
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className={styles.promotionBest} id="app">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <img
-          src={phoImg}
-          alt="Basirah App on Phone"
-          className={styles.phoneImageBest}
-        />
+      <div className={styles.leftSection}>
+        <div
+          className={`${styles.frame} ${isRotating ? styles.rotate : ""}`}
+          style={{ width: 220, height: 440 }}
+        >
+          <div
+            className={styles.frameInner}
+          >
+            <img
+              src={screenImages[currentScreen]}
+              alt="App screen"
+              className={styles.frameImage}
+            />
+          </div>
+        </div>
         <div className={styles.poweredBySkylink}>
           <span>Powered by</span>
           <img

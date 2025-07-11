@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 const steps = [
   {
     label: "Step 1",
-    title: "Sign Up With GreenBank",
-    desc: "Create your GreenBank account and unlock a world of financial possibilities.",
+    title: "Sign Up ",
+    desc: "Create your account and unlock a world of connections with the Quran.",
     img: "https://framerusercontent.com/images/qyVoyGkt2hIvTpDbMsKP8IDzV4k.svg",
   },
   {
     label: "Step 2",
-    title: "Connect Your Accounts",
-    desc: "Link all your financial accounts effortlessly to GreenBank for comprehensive management.",
+    title: "Register on your preferred Courses",
+    desc: "Select , Subscribe and Learn",
     img: "https://framerusercontent.com/images/fZKgU9NskcdakiKIeEu1PszpIc0.svg",
   },
   {
     label: "Step 3",
-    title: "Start Banking",
-    desc: "Take control of your finances with GreenBank’s intuitive features and personalized tools.",
+    title: "Start Nurturing you mind",
+    desc: "Enjoy Your Journey",
     img: "https://framerusercontent.com/images/SGEfviCDbC0m2kfFJ5Dheq0Wd0.svg",
   },
 ];
@@ -46,7 +46,7 @@ const HowItWorks = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Three simple steps to unlock the power of GreenBank and revolutionize your banking experience.
+            Three simple steps to unlock the power of Quran and revolutionize your Life.
           </motion.p>
         </div>
 

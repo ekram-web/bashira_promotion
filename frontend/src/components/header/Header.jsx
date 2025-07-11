@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./header.module.css";
-import logo from "../../assets/images/Basirah Logo Full Color(Transparent).png";
+import logo from "../../assets/images/Basirah Full Color Transparent.png";
 import { FaBars } from "react-icons/fa";
 
 const navLinks = [
-  { name: "App", href: "#app" },
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
   { name: "What We Offer", href: "#offer" },
-  { name: "How It Works", href: "#how" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -25,7 +25,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["app", "offer", "how", "contact"];
+      const sections = ["hero", "about", "offer", "contact"];
       const scrollPosition = window.scrollY + 150;
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -55,7 +55,6 @@ export default function Header() {
       <div className={styles.container}>
         <a href="#" className={styles.logo}>
           <img src={logo} alt="Basirah Logo" />
-          <span className={styles.brandName}>Basirah Institute</span>
         </a>
         <nav className={`${styles.navMenu} ${menuOpen ? styles.open : ""}`}>
           <button
@@ -88,7 +87,7 @@ export default function Header() {
           onClick={() => setMenuOpen(true)}
           aria-label="Open Menu"
         >
-          <FaBars size={32} color="#00C894" />
+          <FaBars size={32} color="#042048" />
         </button>
       </div>
     </header>
