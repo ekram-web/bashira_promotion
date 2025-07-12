@@ -29,8 +29,10 @@ export default function Contact() {
           className={styles.logoSmall}
         />
         <div className={styles.inviteText}>
-          <h2>Let's Connect!</h2>
-          <p>
+          <h2 style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}>
+            Let's Connect!
+          </h2>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}>
             We're here to help you grow, learn, and connect. Reach out to
             Basirah for support, partnership, or just to say hello.
           </p>
@@ -42,7 +44,12 @@ export default function Contact() {
         autoComplete="off"
         aria-label="Contact Basirah form"
       >
-        <div className={styles.formTitle}>Contact Basirah</div>
+        <div 
+          className={styles.formTitle}
+          style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+        >
+          Contact Basirah
+        </div>
         <div className={styles.inputGroup}>
           <FiUser className={styles.inputIcon} />
           <input

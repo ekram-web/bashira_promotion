@@ -108,8 +108,16 @@ const WhatWeOffer = () => {
     <div className={styles.scrollWrapper} ref={scrollWrapperRef}>
       <div className={styles.stackArea}>
         <div className={styles.left}>
-          <div className={styles.title}>What We Offer</div>
-          <div className={styles.subTitle}>
+          <div 
+            className={styles.title}
+            style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+          >
+            What We Offer
+          </div>
+          <div 
+            className={styles.subTitle}
+            style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}
+          >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente qui
             quis, facere, cupiditate, doloremque natus ex perspiciatis ratione hic
             corrupti adipisci ea doloribus!
@@ -128,8 +136,18 @@ const WhatWeOffer = () => {
               className={styles.card}
               ref={(el) => (cardsRef.current[index] = el)}
             >
-              <div className={styles.sub}>{sub}</div>
-              <div className={styles.content}>{content}</div>
+              <div 
+                className={styles.sub}
+                style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+              >
+                {sub}
+              </div>
+              <div 
+                className={styles.content}
+                style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}
+              >
+                {content}
+              </div>
             </div>
           ))}
         </div>

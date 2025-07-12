@@ -5,7 +5,12 @@ import skylinkLogo from "../../../assets/skylink.svg";
 function Partner() {
   return (
     <section className={styles.partnerSection}>
-      <h2 className={styles.heading}>Our Partner</h2>
+      <h2 
+        className={styles.heading}
+        style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+      >
+        Our Partner
+      </h2>
       <div className={styles.partnerBadge}>
         <div className={styles.logoRing}>
           <img
@@ -15,7 +20,10 @@ function Partner() {
           />
         </div>
         <div className={styles.partnerLabel}>Official Partner</div>
-        <div className={styles.partnerDesc}>
+        <div 
+          className={styles.partnerDesc}
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}
+        >
           Proudly partnering with Skylink to empower learning.
         </div>
       </div>

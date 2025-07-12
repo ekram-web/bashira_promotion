@@ -53,8 +53,16 @@ function Promotion() {
         </div>
       </div>
       <div className={styles.promoRight}>
-        <h2 className={styles.promoHeadline}>Get the Basirah App</h2>
-        <div className={styles.promoBenefit}>
+        <h2 
+          className={styles.promoHeadline}
+          style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+        >
+          Get the Basirah App
+        </h2>
+        <div 
+          className={styles.promoBenefit}
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}
+        >
           Experience seamless learning and teaching—anytime, anywhere.
         </div>
         <div className={styles.downloadRow}>

@@ -22,8 +22,16 @@ export default function About() {
           </div>
         </div>
         <div className={styles.aboutTextBox}>
-          <h1 className={styles.aboutTitle}>WHO WE ARE</h1>
-          <p className={styles.aboutText}>
+          <h1 
+            className={styles.aboutTitle}
+            style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+          >
+            WHO WE ARE
+          </h1>
+          <p 
+            className={styles.aboutText}
+            style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}
+          >
             Basirah Institute is a leading Qur'anic education platform dedicated
             to empowering the next generation with authentic knowledge, modern
             tools, and a global community. Our mission is to make learning
