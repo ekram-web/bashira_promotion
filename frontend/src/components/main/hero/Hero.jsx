@@ -48,7 +48,7 @@ function Hero() {
   const slide = slides[current];
 
   return (
-    <section className={styles.heroRedesign} style={{ background: slide.bg }}>
+    <section id="hero" className={styles.heroRedesign} style={{ background: slide.bg }}>
       <div className={styles.heroText} style={{ textAlign: "left" }}>
         <h1
           key={slide.title}

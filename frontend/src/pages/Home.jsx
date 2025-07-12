@@ -2,13 +2,15 @@ import React from "react";
 import Header from "../components/header/Header.jsx";
 import Footer from "../components/footer/footer.jsx";
 import Hero from "../components/main/hero/Hero.jsx";
-import Promote from "../components/main/promotion/Promote.jsx";
-import Partner from "../components/main/paretner/Partner.jsx";
+import WhatWeOffer from "../components/main/WhatWeOffer/offer.jsx";
+import HowItWorks from "../components/main/HowItWorks/how.jsx";
+import Promote from "../components/main/promotion2/Promote.jsx";
+// import Partner from "../components/main/paretner/Partner.jsx";
 import Review from "../components/main/reviews/Review.jsx";
 import About from "../components/main/about/About.jsx";
-import WhatWeOffer from "../components/main/WhatWeOffer/offer.jsx";
+
 import Contact from "../components/main/contact/Contact.jsx";
-import HowItWorks from "../components/main/HowItWorks/how.jsx";
+
 import "../App.css";
 
 function Home() {
@@ -21,9 +23,8 @@ function Home() {
         <WhatWeOffer />
         <Promote />
         <HowItWorks />
-
         <Review />
-        <Partner />
+        {/* <Partner /> */}
         <Contact />
         <Footer />
       </div>

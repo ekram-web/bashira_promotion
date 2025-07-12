@@ -5,7 +5,7 @@ import logoMark from "../../../assets/images/Basirah Logo Full Color(Transparent
 
 export default function About() {
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.aboutLayout}>
         <div className={styles.aboutImageBox}>
           <img
