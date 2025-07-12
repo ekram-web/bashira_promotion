@@ -61,11 +61,15 @@ const HowItWorks = () => {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: i * 0.2, duration: 0.5 }}
             >
-              <p className={styles.stepLabel}>{step.label}</p>
-              <h4 className={styles.cardTitle}>{step.title}</h4>
-              <p className={styles.cardDesc}>{step.desc}</p>
-              <div className={styles.imageWrap}>
-                <img src={step.img} alt={`Visual for ${step.label}`} />
+              <div className={styles.cardContent}>
+                <div className={styles.cardText}>
+                  <p className={styles.stepLabel}>{step.label}</p>
+                  <h4 className={styles.cardTitle}>{step.title}</h4>
+                  <p className={styles.cardDesc}>{step.desc}</p>
+                </div>
+                <div className={styles.imageWrap}>
+                  <img src={step.img} alt={`Visual for ${step.label}`} />
+                </div>
               </div>
             </motion.div>
           ))}

@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import styles from "./promote.module.css";
 import phoImg from "../../../assets/images/pho.png";
 import qrImg from "../../../assets/images/qr.jpg";
-import skylinkLogo from "../../../assets/images/logo.png";
+import skylinkLogo from "../../../assets/skylink.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAppStoreIos, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
-import quranImg from "../../../assets/images/quran.png";
-import qrImg2 from "../../../assets/images/qr.jpg";
-import skylinkImg from "../../../assets/images/logo.png";
+import Img1 from "../../../assets/images/Basirah app splash page 5 copy@4x.png";
+import Img2 from "../../../assets/images/Basirah app splash page 5 copy 2@4x.png";
+import Img3 from "../../../assets/images/Basirah app splash page 5 copy 6@4x.png";
 
 function Promotion() {
   // Placeholder screen images (replace with real ones later)
-  const screenImages = [quranImg, qrImg2, skylinkImg];
+  const screenImages = [Img1, Img2, Img3];
   const [currentScreen, setCurrentScreen] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
 
