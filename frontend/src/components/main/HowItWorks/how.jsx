@@ -1,25 +1,28 @@
 import React from "react";
 import styles from "./how.module.css";
 import { motion } from "framer-motion";
+import homeImg from "../../assets/images/home.jpg";
+import libraryImg from "../../assets/images/library.jpg";
+import loginImg from "../../assets/images/login.jpg";
 
 const steps = [
   {
     label: "Step 1",
     title: "Sign Up ",
     desc: "Create your account and unlock a world of connections with the Quran.",
-    img: "https://framerusercontent.com/images/qyVoyGkt2hIvTpDbMsKP8IDzV4k.svg",
+    img: homeImg,
   },
   {
     label: "Step 2",
     title: "Register on your preferred Courses",
     desc: "Select , Subscribe and Learn",
-    img: "https://framerusercontent.com/images/fZKgU9NskcdakiKIeEu1PszpIc0.svg",
+    img: libraryImg,
   },
   {
     label: "Step 3",
     title: "Start Nurturing you mind",
     desc: "Enjoy Your Journey",
-    img: "https://framerusercontent.com/images/SGEfviCDbC0m2kfFJ5Dheq0Wd0.svg",
+    img: loginImg,
   },
 ];
 
