@@ -1,9 +1,11 @@
 .footer {
   background: linear-gradient(120deg, #042048 60%, #00c894 100%);
   color: #fff;
-  padding: 0 1rem 2.5rem 1rem;
+  padding: -1.1rem 1rem 0 1rem;
   position: relative;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
 
 .wave {
@@ -25,10 +27,13 @@
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 3rem;
+  padding-top: 0.5rem;
   position: relative;
   z-index: 2;
-  width: 100%;
+  width: 92%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .leftColumn {
@@ -36,8 +41,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  min-width: 220px;
-  flex: 1 1 520px;
+  min-width: 120px;
+  flex: 1 1 120px;
   margin-top: 0;
 }
 
@@ -45,12 +50,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.1rem;
-  margin-bottom: 0;
+  gap: 0.05rem;
+  margin-bottom: 0.5rem;
 }
 
 .footerLogo {
-  width: 300px;
+  width: 180px;
   margin-bottom: 0;
 }
 
@@ -58,22 +63,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
-  margin-left: 4rem;
+  gap: 0.05rem;
+  margin-left: 2.2rem;
+  margin-top: 0;
 }
 
 .poweredBy p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #e0f7f4;
-  margin: 0 0 0.5rem 0;
-  font-weight: 50;
+  margin: 0 0 0.5rem 0.5;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
 }
 
 .partnerLogo {
-  width: 150px;
+  width: 140px;
   filter: drop-shadow(0 1px 6px rgba(255, 255, 255, 0.422));
-  margin: 0;
-  padding: 0;
+  margin: 0.3rem 0 0 0.2rem;
 }
 
 .rightColumn {
@@ -81,10 +87,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  min-width: 220px;
-  flex: 0.5 1 320px;
-  gap: 2.5rem;
-  margin-top: 5rem;
+  min-width: 120px;
+  flex: 0.5 1 120px;
+  gap: 1.5rem;
+  margin-top: 3.7rem;
 }
 
 .footerAddress,
@@ -122,6 +128,41 @@
   box-shadow: 0 4px 16px #00c89455;
 }
 
+.middleColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1 0.5 120px;
+  min-width: 80px;
+  margin-top: 4.3rem;
+  margin-left: 6.5rem;
+}
+
+.footerNavMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerNavMenu a {
+  color: #e0f7f4;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+
+.footerNavMenu a:hover,
+.footerNavMenu a:focus {
+  color: #00c894;
+}
+
 @media (max-width: 900px) {
   .footerContent {
     flex-direction: column;
@@ -141,7 +182,16 @@
   }
 
   .partnerLogo {
-    width: 100px;
+    width: 90px;
+    margin-left: 0.4rem;
+  }
+
+  .footerLogo {
+    width: 110px;
+  }
+
+  .logoBlock {
+    gap: 0.6rem;
   }
 
   .socials {

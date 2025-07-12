@@ -5,6 +5,7 @@ const WhatWeOffer = () => {
   
   const cardsRef = useRef([]);
   const scrollWrapperRef = useRef(null);
+  const hasScrolledToNextSection = useRef(false);
 
   useEffect(() => {
     const rotateCards = () => {
@@ -18,6 +19,40 @@ const WhatWeOffer = () => {
           card.style.zIndex = cardsRef.current.length - index;
         }
       });
+    };
+
+    const resetCards = () => {
+      cardsRef.current.forEach((card) => {
+        card.classList.remove(styles.away);
+      });
+      rotateCards();
+      hasScrolledToNextSection.current = false;
+      
+      // Reset scroll wrapper state
+      if (scrollWrapperRef.current) {
+        scrollWrapperRef.current.classList.remove(styles.scrollWrapperReleased);
+        scrollWrapperRef.current.scrollTop = 0;
+      }
+      // Scroll the section into view at the top
+      const section = document.getElementById('offer');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    const scrollToNextSection = () => {
+      const currentSection = document.getElementById('offer');
+      if (currentSection && currentSection.nextElementSibling) {
+        currentSection.nextElementSibling.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // Reset cards after scrolling to next section
+        setTimeout(() => {
+          resetCards();
+        }, 1000);
+      }
     };
 
     const handleScroll = () => {
@@ -38,11 +73,21 @@ const WhatWeOffer = () => {
 
       rotateCards();
 
-      // Unlock scroll if all cards are gone
-      if (index >= cardsRef.current.length) {
+      // Check if all cards are gone and we haven't already scrolled to next section
+      if (index >= cardsRef.current.length && !hasScrolledToNextSection.current) {
+        hasScrolledToNextSection.current = true;
         scrollWrapperRef.current.classList.add(styles.scrollWrapperReleased);
-      } else {
-        scrollWrapperRef.current.classList.remove(styles.scrollWrapperReleased);
+        // Auto-scroll to next section after a brief delay
+        setTimeout(() => {
+          scrollToNextSection();
+        }, 800);
+      } else if (index < cardsRef.current.length) {
+        // If user scrolls back up, immediately reset cards and scroll position
+        if (hasScrolledToNextSection.current) {
+          resetCards();
+        } else {
+          scrollWrapperRef.current.classList.remove(styles.scrollWrapperReleased);
+        }
       }
     };
 
@@ -76,7 +121,7 @@ const WhatWeOffer = () => {
             ['Simplified', 'Complex tasks are now simple'],
             ['Boost Productivity', 'Perform Tasks in less time'],
             ['Facilitated learning', 'Train anyone from anywhere'],
-            ['Support', 'Now it’s 24/7 support'],
+            ['Support', 'Now it\'s 24/7 support'],
           ].map(([sub, content], index) => (
             <div
               key={index}
