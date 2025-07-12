@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./footer.module.css";
 import logo from "../../assets/images/Basirah Full Color Transparent.png";
 import skylink from "../../assets/images/logo.png";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTiktok, FaInstagram } from "react-icons/fa";
 
 const navLinks = [
   { name: "Home", href: "#hero" },
@@ -55,12 +55,12 @@ function Footer() {
               <FaFacebookF size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://tiktok.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
+              aria-label="Tiktok"
             >
-              <FaTwitter size={24} />
+              <FaTiktok size={24} />
             </a>
             <a
               href="https://instagram.com"
