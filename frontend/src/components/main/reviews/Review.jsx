@@ -78,7 +78,12 @@ function Review() {
 
   return (
     <section className={styles.reviewSection}>
-      <h2 className={styles.heading}>What People Say About Us</h2>
+      <h2 
+        className={styles.heading}
+        style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
+      >
+        What People Say About Us
+      </h2>
       <div
         className={styles.reviews}
         style={{

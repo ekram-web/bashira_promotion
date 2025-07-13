@@ -53,12 +53,14 @@ function Hero() {
         <h1
           key={slide.title}
           className={styles.heroTitle + " " + styles[textFade]}
+          style={{ fontFamily: "'Merriweather', serif", fontWeight: "600" }}
         >
           {slide.title}
         </h1>
         <p
           key={slide.subtitle}
           className={styles.heroSubtitle + " " + styles[textFade]}
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: "400" }}
         >
           {slide.subtitle}
         </p>

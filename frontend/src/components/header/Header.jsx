@@ -51,7 +51,9 @@ export default function Header() {
   };
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.transparent : ""}`}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.transparent : ""}`}
+    >
       <div className={styles.container}>
         <a href="#" className={styles.logo}>
           <img src={logo} alt="Basirah Logo" />
